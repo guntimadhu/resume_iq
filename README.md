@@ -1,16 +1,21 @@
+<div align="center">
+
 # ResumeIQ 📄✨
-### Land more interviews, optimize every application
+
+### *Land more interviews, optimize every application*
 
 ![Flutter](https://img.shields.io/badge/Flutter-3.41.9-02569B?style=for-the-badge&logo=flutter&logoColor=white)
 ![Dart](https://img.shields.io/badge/Dart-3.11.5-0175C2?style=for-the-badge&logo=dart&logoColor=white)
-![Gemini AI](https://img.shields.io/badge/Gemini_AI-1.5_Flash-8E24AA?style=for-the-badge&logo=google&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-silver?style=for-the-badge)
+![Gemini AI](https://img.shields.io/badge/Gemini-1.5%20Flash-4285F4?style=for-the-badge&logo=google&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-9B59B6?style=for-the-badge)
+
+</div>
 
 ---
 
 ## ✨ About
 
-**ResumeIQ** is an AI-powered resume analyzer that helps you beat Applicant Tracking Systems (ATS) and land more interviews. Upload your resume, paste a job description, and get an instant match score with actionable insights — all powered by Google Gemini AI, running entirely on your device.
+**ResumeIQ** is an AI-powered resume optimizer built with Flutter and Google Gemini 1.5 Flash. Upload your PDF resume or paste your resume text, add a job description, and get an instant ATS compatibility score with keyword gap analysis, section-by-section feedback, and actionable improvement suggestions — all stored locally on your device.
 
 ---
 
@@ -22,76 +27,87 @@
 
 ## 🚀 Features
 
-- 📤 **Upload PDF resume** or paste resume text directly
-- 📋 **Paste any job description** to analyze against
-- 🎯 **ATS Match Score** (0–100) with animated circle gauge
-- ✅ **Matching keywords** shown as green chips
-- ❌ **Missing keywords** shown as red/amber chips
-- 💡 **Numbered improvement suggestions** from Gemini AI
-- 🔍 **Section-by-section analysis** — Contact, Summary, Experience, Skills, Education, Formatting
-- 💾 **Full analysis history** saved locally with Hive
-- 📤 **Share complete report** as text
-- 🎓 **Onboarding slides** on first launch
-- ✨ **Splash screen** with micro-animations
-- ↩️ **Undo delete** with 7-second toast notification
-- 🌙 **Dark / Light theme** toggle
+- 📄 **PDF Upload or Text Paste** — Upload your resume as a PDF or paste it directly as text
+- 💼 **Job Description Input** — Paste any job posting to match your resume against
+- 📊 **ATS Match Score** — Animated circular gauge (0–100) showing how well your resume matches
+- ✅ **Matching Keywords** — Green keyword chips showing what you already have covered
+- ❌ **Missing Keywords** — Red/amber chips highlighting what you need to add
+- 💡 **Improvement Suggestions** — Numbered, actionable tips to boost your ATS score
+- 🔍 **Section-by-Section Analysis** — Detailed feedback on Contact, Summary, Experience, Skills, Education, and Formatting
+- 💾 **Analysis History** — All past analyses saved locally with Hive — never lose a review
+- 🗑️ **Soft Delete + Undo** — 7-second undo toast so you never accidentally lose an analysis
+- 📤 **Share Report** — Export the full analysis as formatted text via `share_plus`
+- 🎬 **Onboarding Flow** — 4-slide intro with dot indicator (shown only on first launch)
+- 🌙 **Deep Purple & Silver** — Elegant, professional color scheme built for job seekers
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Technology | Version | Purpose |
-|---|---|---|
-| Flutter | 3.41.9 | Cross-platform UI framework |
-| Dart | 3.11.5 | Programming language |
-| Gemini AI | 1.5 Flash | ATS scoring & keyword analysis |
-| Hive | 2.2.3 | Local database / history |
-| syncfusion_flutter_pdf | 27.2.4 | PDF text extraction |
-| file_picker | 8.1.4 | PDF file selection |
-| share_plus | 10.1.2 | Share analysis report |
-| google_fonts (Poppins) | 6.2.1 | Typography |
+| Technology | Version / Package |
+|---|---|
+| **Flutter** | 3.41.9 |
+| **Dart** | 3.11.5 |
+| **AI Model** | Google Gemini 1.5 Flash |
+| **Local Storage** | `hive` + `hive_flutter` |
+| **PDF Parsing** | `syncfusion_flutter_pdf` |
+| **File Picker** | `file_picker` |
+| **Share** | `share_plus` |
+| **Fonts** | `google_fonts` — Poppins |
+| **Networking** | `http` |
+| **Date Formatting** | `intl` |
 
 ---
 
 ## ⚙️ Getting Started
 
 ### Prerequisites
-- Flutter 3.41.9+
-- Dart 3.11.5+
-- A [Gemini API key](https://aistudio.google.com/app/apikey) (free)
+- Flutter SDK 3.41+ installed
+- A [Google AI Studio](https://aistudio.google.com) API key for Gemini
 
 ### Installation
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/guntimadhu999-glitch/resume_iq.git
+git clone https://github.com/your-username/resume_iq.git
 cd resume_iq
 
 # 2. Install dependencies
 flutter pub get
 
-# 3. Run with your Gemini API key
-flutter run --dart-define=GEMINI_API_KEY=your_api_key_here
+# 3. Add your Gemini API key
+#    Open lib/services/gemini_service.dart and replace the key:
+#    const _apiKey = 'YOUR_GEMINI_API_KEY';
+
+# 4. Run the app
+flutter run
 ```
+
+> **Supported targets:** Android, iOS, Web, Windows, macOS, Linux
 
 ---
 
 ## 📖 How to Use
 
-1. **Launch the app** — complete the onboarding slides on first launch
-2. **Tap "New Analysis"** on the home screen
-3. **Upload your resume** — pick a PDF file or paste your resume text
-4. **Paste the job description** of the role you're applying for
-5. **Tap Analyze** — Gemini AI processes your resume in seconds
-6. **View your results** — ATS score, matching & missing keywords, suggestions
-7. **Save the analysis** — stored in history for future reference
-8. **Share the report** — send the full analysis as text to yourself or a mentor
+1. **Launch** the app and complete the one-time onboarding
+2. **Tap +** on the Home screen to start a new analysis
+3. **Add your resume** — upload a PDF file or paste your resume text directly
+4. **Paste the job description** you want to apply for
+5. **Tap "Analyze with AI"** — Gemini reviews your resume against the job description
+6. **View your results:**
+   - ATS match score with animated ring
+   - Green chips for matching keywords you already have
+   - Red/amber chips for missing keywords to add
+   - Numbered improvement suggestions
+   - Section-by-section breakdown (Contact, Summary, Experience, Skills, Education, Formatting)
+7. **Share the report** via any app using the 📤 button
+8. **Analysis saved automatically** — browse your full history on the Home screen
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcome! Feel free to open an issue or submit a pull request.
+Contributions are welcome! Feel free to open issues or submit pull requests.
 
 1. Fork the repository
 2. Create your feature branch: `git checkout -b feature/amazing-feature`
@@ -103,8 +119,14 @@ Contributions are welcome! Feel free to open an issue or submit a pull request.
 
 ## 📄 License
 
-This project is licensed under the MIT License.
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
 ---
 
-<p align="center">Built with 💜 using Flutter & Gemini AI</p>
+<div align="center">
+
+Built with ❤️ using Flutter & Google Gemini AI
+
+*ResumeIQ v1.0.0 — AI Resume Optimizer*
+
+</div>
