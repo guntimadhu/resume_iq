@@ -39,7 +39,7 @@ Screenshots coming soon
 | google_fonts Poppins | Typography |
 
 ## Getting Started
-git clone https://github.com/guntimadhu999-glitch/resume_iq.git
+git clone https://github.com/guntimadhu/resume_iq.git
 cd resume_iq
 flutter pub get
 
